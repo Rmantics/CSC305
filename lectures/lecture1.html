@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectures - CSC 305</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="wrapper">
+    <div id="header-placeholder"></div>
+    <main>
+        <h2>Lecture 1: Common Linux Terms and Commands</h2>
+
+        <section>
+            <h3>1. Common Linux Terms</h3>
+            <ul>
+                <li><strong>Linux:</strong> An open-source Unix-like operating system kernel developed by Linus Torvalds. It's the core software that manages hardware, processes, and system tasks.</li>
+                <li><strong>Distribution (or Distro):</strong> A packaged version of Linux that includes the kernel, system software, and applications. Examples include Ubuntu, Fedora, and Debian.</li>
+                <li><strong>GNU:</strong> An extensive collection of free software, initiated by Richard Stallman. When people refer to Linux operating systems, they often mean GNU/Linux, as many distributions combine GNU software with the Linux kernel. (Package example – GNU Bash)</li>
+                <li><strong>Kernel:</strong> The core component of the OS responsible for interacting with hardware, managing resources, and executing processes.</li>
+                <li><strong>Shell:</strong> A command-line interface for interacting with the operating system. The most common shell in Linux is the Bash shell.</li>
+                <li><strong>Bash:</strong> The Bourne Again SHell, a popular Linux shell and scripting language.</li>
+                <li><strong>Terminal:</strong> A program that allows users to access the shell.</li>
+                <li><strong>Root:</strong> The superuser account in Linux, which has administrative privileges. Also refers to the base directory in the file system (/).</li>
+                <li><strong>Home Directory:</strong> The personal directory of a user, typically found in <code>/home/username/</code>.</li>
+            </ul>
+        </section>
+        
+        <hr>
+        
+        <section>
+            <h3>2. Command Structure</h3>
+            <p><strong>Example: <code>ls -l /home/user/documents</code></strong></p>
+            <ul>
+                <strong>Command Name (or Command):</strong>
+                    <ul>
+                        <li><strong>Example:</strong> <code>ls</code></li>
+                        <li>This is the primary instruction you're giving to the shell. In this case, <code>ls</code> is the command that lists directory contents.</li>
+                    </ul>
+                
+                <strong>Options (or Flags or Switches):</strong>
+                    <ul>
+                        <li><strong>Example:</strong> <code>-l</code></li>
+                        <li>Options modify the behavior of the command. They are usually prefixed by a single dash (-) and can be a single letter or a word. Some commands also support long options that start with two dashes (e.g., <code>--long-option</code>).</li>
+                        <li><code>-l:</code> Use a long listing format.</li>
+                    </ul>
+                
+                <strong>Arguments:</strong>
+                    <ul>
+                        <li><strong>Example:</strong> <code>/home/user/documents</code></li>
+                        <li>Arguments are typically the "targets" or "subjects" of the command. They provide context or specifics for the command to operate on. In this example, the argument specifies the directory whose contents we want to list.</li>
+                    </ul>
+                
+            </ul>
+        </section>
+        
+        <hr>
+        
+        <section>
+            <h3>3. Common Commands</h3>
+            <ul>
+                <li><code>cat:</code> Concatenate the output of a file to the terminal.</li>
+                <li><code>cd:</code> Change directory.</li>
+                <li><code>cp:</code> Copy a file to another file.</li>
+                <li><code>date:</code> Show the date and time of the system clock.</li>
+                <li><code>echo:</code> Write some readable text to the terminal.</li>
+                <li><code>ls:</code> List all files and folders in a directory/folder.</li>
+                <li><code>mkdir:</code> Make a new directory.</li>
+                <li><code>rmdir:</code> Remove an existing directory.</li>
+                <li><code>rm:</code> Remove a file from the disk.</li>
+                <li><code>more:</code> Display one screen at a time.</li>
+                <li><code>ps:</code> Display process status.</li>
+                <li><code>pwd:</code> Print the working directory.</li>
+                <li><code>who:</code> Show who is logged on.</li>
+                <li><code>whoami:</code> Show the current logged-in user.</li>
+            </ul>
+        </section>
+        
+        <hr>
+        
+        <section>
+            <h3>4. DOS/Linux Command Comparison</h3>
+            <p>For users familiar with Windows, the table below shows a comparison of common DOS commands and their Linux counterparts. Remember, Linux commands typically have many options. Use the <code>man</code> command to find out more.</p>
+        
+            <table border="1" style="border-collapse: collapse; width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Windows/DOS commands</th>
+                        <th>Linux commands</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>&lt;command&gt; /?</code></td>
+                        <td><code>man &lt;command&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>cd</code></td>
+                        <td><code>cd</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>chdir</code></td>
+                        <td><code>pwd</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>cls</code></td>
+                        <td><code>clear</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>copy</code></td>
+                        <td><code>cp</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>date</code></td>
+                        <td><code>date</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>del</code></td>
+                        <td><code>rm</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>dir</code></td>
+                        <td><code>ls</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>echo</code></td>
+                        <td><code>echo</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>edit</code></td>
+                        <td><code>gedit</code> (or another editor)</td>
+                    </tr>
+                    <tr>
+                        <td><code>exit</code></td>
+                        <td><code>exit</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Fc</code></td>
+                        <td><code>diff</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>find</code></td>
+                        <td><code>grep</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>format</code></td>
+                        <td><code>mke2fs</code> or <code>mformat</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>mem</code></td>
+                        <td><code>free</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>mkdir</code></td>
+                        <td><code>mkdir</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>more</code></td>
+                        <td><code>more</code> or <code>less</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>move</code></td>
+                        <td><code>mv</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>ren</code></td>
+                        <td><code>mv</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>time</code></td>
+                        <td><code>date</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <hr>
+        
+        <section>
+            <h3>5. Command Line Text Editing Tools</h3>
+            <ul>
+                <li><strong>VI:</strong> Primary editor, installed by default on most Linux distributions.</li>
+                <li><strong>VIM:</strong> Also known as Enhanced VI.</li>
+                <li><strong>EMACS:</strong> Command line text editor designed to be easier to use than VI.</li>
+                <li><strong>NANO:</strong> Another popular text editor with ease of use in mind.</li>
+            </ul>
+            <p>Since most Linux distributions include VI, it's important to focus on using VI or VIM.</p>
+        </section>
+        
+    </main>
+ <!-- Footer inclusion -->
+ <div id="footer-placeholder"></div>
+
+ <script src="../scripts.js"></script>
+ </div>
+</body>
+</html>

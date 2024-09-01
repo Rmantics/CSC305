@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectures - CSC 305</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="wrapper">
+    <div id="header-placeholder"></div>
+    <main>
+        <h2>Assignment 1: Linux Command Line Basics</h2>
+
+        <section>
+            <h3>Deliverable</h3>
+            <p>Take a screenshot showing that you completed each step. Upload the screenshots to Blackboard as is, or compress all the files into a zip file and upload it to Blackboard.</p>
+        </section>
+        
+        <hr>
+        
+        <section>
+            <h3>Steps to Complete</h3>
+            
+            <ol>
+                <li>
+                    <strong>Login to the Linux server:</strong>
+                    <p>We need to use an SSH (Secure Shell) client to do so. Information needed to login:</p>
+                    <ul>
+                        <li><strong>IP (Internet Protocol) address of the server:</strong> <code>163.238.35.166</code></li>
+                        <li><strong>Active credentials for the server:</strong></li>
+                        <ul>
+                            <li>Username: <code>LastName</code></li>
+                            <li>Password: <code>firstnameXXXX</code> (Where “XXXX” is the last 4 numbers of your student ID)</li>
+                        </ul>
+                    </ul>
+                    <p>On a Windows computer, I recommend using the SSH applications <strong>Putty</strong> or <strong>Xshell</strong>:</p>
+                    <ul>
+                        <li><a href="https://www.putty.org/" target="_blank" rel="noopener">Putty</a></li>
+                        <li><a href="https://www.netsarang.com/en/free-for-home-school/" target="_blank" rel="noopener">Xshell</a></li>
+                    </ul>
+                    <p><strong>Login using Putty:</strong></p>
+                    <ul>
+                        <li>Launch Putty (You should have a shortcut on the desktop).</li>
+                        <li>Type in the “Host Name” box: <code>163.238.35.166</code></li>
+                        <li>Ensure the SSH radio button is selected for “Connection type:”.</li>
+                        <li>Click “Open”.</li>
+                        <li>When prompted, enter your username and then the password.</li>
+                        <li><strong>Note:</strong> When typing a password on Linux systems, no text is displayed on the screen.</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>(Skip if using Putty) On a Linux desktop or using Xshell:</strong> 
+                    <p>You can use the SSH command line tool to log in. Example:</p>
+                    <code>ssh username@163.238.35.166</code>
+                </li>
+        
+                <li>
+                    <strong>Once logged in:</strong>
+                    <ul>
+                        <li>Check which directory you are currently working in: <code>pwd</code></li>
+                        <li>This command will display the absolute path that you are working in. It will be displayed as a string, with each directory separated by a forward slash “/”. The directory structure in Linux is hierarchical.</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Create a new directory:</strong> 
+                    <ul>
+                        <li>Command: <code>mkdir directory_name</code></li>
+                        <li><strong>Note:</strong> Replace “directory_name” with anything you would like to name it.</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Navigate to that directory:</strong>
+                    <ul>
+                        <li>Command: <code>cd directory_name</code></li>
+                        <li>Use <code>pwd</code> to verify where you are located in the directory structure.</li>
+                        <li>Command: <code>pwd</code></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Create a file in the directory:</strong> 
+                    <ul>
+                        <li>Command: <code>touch file_name</code></li>
+                        <li><strong>Note:</strong> Replace “file_name” with anything you would like to name it. The <code>touch</code> command creates an empty file in the directory.</li>
+                        <li>To see if the file was created:</li>
+                        <li>Command: <code>ls</code></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Print some text to the terminal:</strong> 
+                    <ul>
+                        <li>Command: <code>echo "text you want to print"</code></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Redirect the printed text to the file you created:</strong>
+                    <ul>
+                        <li>Command: <code>echo "my first text file" > file_name</code></li>
+                        <li>This command takes the output from the echo, which is the text "my first text file", and writes it to the file <code>file_name</code>.</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Print the contents of a file:</strong> 
+                    <ul>
+                        <li>Command: <code>cat file_name</code></li>
+                        <li>This command displays the contents of the file to the terminal output.</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Create another directory:</strong> 
+                    <ul>
+                        <li>Command: <code>mkdir new_directory</code></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Navigate to the new directory:</strong>
+                    <ul>
+                        <li>Command: <code>cd ./new_directory</code></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Type <code>pwd</code> to see where you are:</strong> 
+                    <ul>
+                        <li>Command: <code>pwd</code></li>
+                        <li>Also, type <code>ls</code> to see if there are any files in there.</li>
+                        <li>Command: <code>ls</code></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Navigate back to the previous directory:</strong>
+                    <p>In command line interfaces, there are two virtual pointers that represent the current directory and the parent directory of the current directory:</p>
+                    <ul>
+                        <li>Current directory is <code>.</code></li>
+                        <li>Parent/previous directory is <code>..</code></li>
+                    </ul>
+                    <p>To navigate to the previous directory:</p>
+                    <ul>
+                        <li>Command: <code>cd ..</code></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>See what is in this directory using <code>ls</code>:</strong> 
+                    <ul>
+                        <li>Command: <code>ls</code></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Create a new file called <code>hello.sh</code>:</strong> 
+                    <ul>
+                        <li>Command: <code>touch hello.sh</code></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Learn how to use <code>vi</code>/<code>vim</code>:</strong>
+                    <ul>
+                        <li>Command: <code>vimtutor</code></li>
+                        <li>This is a hands-on tutorial application that will teach you how to use <code>vi</code>/<code>vim</code>. The tutorial is quite long, so stop at section 2.2, which covers most of what you will need to get started.</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <strong>Play around with other commands given at the beginning of the lab (optional)</strong>
+                </li>
+            </ol>
+        </section>
+        
+
+    </main>
+ <!-- Footer inclusion -->
+ <div id="footer-placeholder"></div>
+
+ <script src="../scripts.js"></script>
+ </div>
+</body>
+</html>

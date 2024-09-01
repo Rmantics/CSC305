@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+ 
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    text-align: center;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2rem;
+}
+
+header img {
+    width: auto; /* Make the image scale to fit the width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 200px; /* Adjust this to control the maximum height */
+    object-fit: cover; /* Ensures the image covers the area */
+    object-position: center; /* Centers the image */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    max-width: 850px;
+    text-align: left;
+    margin: auto;
+    flex: 1; /* This makes the main content area take up the remaining space */
+}
+
+footer {
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    margin: auto;
+    width: 100%;
+    margin-top: auto; /* This pushes the footer to the bottom */
+}
+
+/* List Styles */
+ul {
+    list-style-type: none; /* Regular bullet points */
+    padding-left: .5em; /* Adds space to the left of the bullets */
+    margin-bottom: 2em;
+    margin-top: .5em;
+    display: block; /* Ensure list items are block-level elements */
+}
+
+ol {
+    padding-left: .5em; /* Adds space to the left of the bullets */
+    margin-bottom: 2em;
+    margin-top: .5em;
+    display: block; /* Ensure list items are block-level elements */
+}
+
+ul li {
+   
+    color: black; /* Light text color for better visibility on dark backgrounds */
+    margin-bottom: 0.5em; /* Space between list items */
+    font-size: 1rem; /* Adjust font size to your preference */
+    align-items: center;
+    display: block; /* Ensure list items are block-level elements */
+}
+
+ul li::before {
+    content: '■'; /* A check mark symbol for list items */
+    margin-right: 0.75em; /* Space between the icon and the text */
+    color: #333; 
+    font-weight: bold;
+}
+
+object {
+    width: 100%;
+    height: auto;
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Full width table */
+    border-collapse: collapse; /* Merge borders */
+    margin: 1em 0; /* Space around the table */
+    background-color: #f4f4f4; /* Light background color */
+    font-size: 1rem; /* Adjust font size to your preference */
+}
+
+th, td {
+    padding: 0.75em 1em; /* Padding for readability */
+    text-align: left; /* Align text to the left */
+    border-bottom: 2px solid #333; /* Dark border below header and cells */
+}
+
+th {
+    background-color: #333; /* Dark header background */
+    color: #fff; /* White text in header */
+    text-transform: uppercase; /* Capitalize headers */
+    font-weight: bold; /* Make headers bold */
+}
+
+td {
+    color: #333; /* Dark text color */
+    background-color: #fff; /* White background for cells */
+}
+
+tr:nth-child(even) td {
+    background-color: #e9e9e9; /* Light gray background for even rows */
+}
+
+tr:hover td {
+    background-color: #f1f1f1; /* Slightly darker background on hover */
+}
+
+/* Flexbox container */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the wrapper is at least as tall as the viewport */
+}
+
+/* Link Styles */
+/* Default link style */
+a {
+    color: #2b6af1; /* Light green text color */
+    background-color: transparent; /* No background by default */
+    text-decoration: underline; /* Removes underline */
+    padding: 0.2em 0.4em; /* Add padding for a bit of space around the text */
+    border-radius: 3px; /* Rounded corners for a smoother look */
+}
+
+/* Hover effect that inverts colors */
+a:hover {
+    color: white; /* Dark text color on hover */
+    background-color: #2b6af1; /* Background color turns to the link's original text color */
+    text-decoration: underline; /* Keeps underline off */
+}
+
+a.altlink {
+    color: #76c7c0; /* Light green color for good contrast against dark background */
+    text-decoration: none; /* Removes underline */
+}
+
+a.altlink:hover {
+    text-decoration: underline; /* Adds underline on hover for better visibility */
+    color: #a8e6cf; /* Slightly lighter green on hover */
+    background-color: transparent;
+}

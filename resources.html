@@ -7,15 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>CSC 305 - Linux Operating Systems</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="syllabus.html">Syllabus</a>
-        <a href="lectures.html">Lectures</a>
-        <a href="assignments.html">Assignments</a>
-    </nav>
+    <div id="nav-placeholder"></div>
     <main>
         <h2>Resources</h2>
         <ul>
@@ -25,8 +17,12 @@
             <!-- Add more resources as needed -->
         </ul>
     </main>
-    <footer>
-        <p>Contact: [Your Email] | Office Hours: [Your Office Hours]</p>
-    </footer>
+ <!-- Footer inclusion -->
+ <div id="footer-placeholder"></div>
+
+ <script>
+    document.getElementById("nav-placeholder").innerHTML = '<object type="text/html" data="nav.html" ></object>';
+    document.getElementById("footer-placeholder").innerHTML = '<object type="text/html" data="footer.html" ></object>';
+</script>
 </body>
 </html>

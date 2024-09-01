@@ -4,64 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSC 305 - Linux Operating Systems</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-            padding: 0.5rem;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 1rem;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 2rem;
-            text-align: center;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <h1>CSC 305 - Linux Operating Systems</h1>
-    </header>
-    <nav>
-        <a href="syllabus.html">Syllabus</a>
-        <a href="lectures.html">Lectures</a>
-        <a href="assignments.html">Assignments</a>
-        <a href="resources.html">Resources</a>
-    </nav>
+    <div id="nav-placeholder"></div>
     <main>
         <h2>Welcome to CSC 305 - Linux Operating Systems</h2>
         <p>This course will provide practical experience with LINUX operating systems and the development of functional components of operating systems. You'll gain hands-on experience with the command line interface and the technologies associated with application development in LINUX.</p>
     </main>
-    <footer>
-        <p>Contact: [Your Email] | Office Hours: [Your Office Hours]</p>
-    </footer>
+ <!-- Footer inclusion -->
+ <div id="footer-placeholder"></div>
+
+ <script>
+    document.getElementById("nav-placeholder").innerHTML = '<object type="text/html" data="nav.html" ></object>';
+    document.getElementById("footer-placeholder").innerHTML = '<object type="text/html" data="footer.html" ></object>';
+</script>
 </body>
 </html>

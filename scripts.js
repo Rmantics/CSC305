@@ -1,11 +1,15 @@
 // Function to load external content (header and footer)
 function loadHTML(elementId, url) {
-    // Check if the URL starts with a slash, meaning it’s relative to the root directory
-    if (!url.startsWith('/')) {
-        url = '/' + url; // Ensure the URL is relative to the root
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    let baseURL;
+
+    if (isLocal) {
+        baseURL = ''; // Use relative paths for local
+    } else {
+        baseURL = '/CSC305'; // Adjust to your remote server structure
     }
 
-    fetch(url)
+    fetch(baseURL + '/' + url)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Could not fetch ${url}`);
@@ -17,6 +21,7 @@ function loadHTML(elementId, url) {
         })
         .catch(error => console.error('Error fetching content:', error));
 }
+
 // Function to load page content dynamically
 function loadPage(url) {
     fetch(url)
